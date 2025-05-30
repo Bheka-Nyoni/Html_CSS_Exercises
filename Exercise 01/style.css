@@ -1,0 +1,128 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f3f3f3;
+}
+
+/* Header Styling */
+.header {
+    text-align: center;
+    padding: 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+/* Product Container - Grid Layout */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    gap: 1.5rem;
+    justify-content: center;
+    padding: 2rem;
+}
+
+/* Product Card Styling */
+.product-card {
+    background-color: #ffffff;
+    width: 300px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.product-card .product-name {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.product-card .product-price {
+    font-size: 1rem;
+    color: #f50505;
+    margin-bottom: 1rem;
+}
+
+/* Button Styling */
+.add-to-cart-button {
+    background-color: #4CAF50;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-button:hover {
+    background-color: #45a049;
+}
+
+.add-to-cart-button:focus {
+    outline: 2px solid #388e3c;
+    outline-offset: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-container {
+        grid-template-columns: repeat(2, 300px);
+    }
+}
+
+@media (max-width: 480px) {
+    .product-container {
+        grid-template-columns: 300px;
+    }
+}
+
+/* Pseudo-classes for additional styling */
+.product-card:nth-child(odd) .product-name {
+    color: #2c3e50;
+}
+
+.product-card:nth-child(even) .product-price {
+    font-weight: bold;
+}
+
+.product-card:hover .product-name {
+    color: #4CAF50;
+}
+
+.product-card:first-child {
+    border: 2px solid #4CAF50;
+}
+
+.product-card:last-child .add-to-cart-button {
+    background-color: #388e3c;
+}
+
+.product-card:last-child .add-to-cart-button:hover {
+    background-color: #2e7d32;
+}
